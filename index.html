@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row m-3"></div>
+
+        <div class="row m-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body" id="title-card">
+                        <h2>Plant-Based Goodness</h2>
+                        <h3>The Crunchiest Word Guessing Game</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-3"></div>
+
+        <div class="row m-2">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body" id="word-card">
+                        <p>What wholesome treat am I?</p>
+                        <hr>
+                        <p id="select-word">The Word: </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <p id="bad-guy-warning">Don't let the bad guy steal your produce!</p>
+                    <img id="bad-guy" src="./assets/img/bad-guy.jpg" alt="Bad guy, here to steal your produce!">
+                    <p id="bad-guy-win">Huzzah! All mine!</p>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body mb-2" id="score-card">
+
+                        <p id="wins">Wins: 0</p>
+                        <p id="losses">Losses: 0</p>
+                        <br>
+                        <p id="guesses-left">Guesses Left: 7</p>
+                        <p id="guesses-made">Guesses Made: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-3"></div>
+
+        <div class="row m-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body" id="instruction-card">
+                        <p>Type lowercase letters one by one to try to solve the puzzle. Each wrong guess brings the
+                            bady guy close, oh no!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
