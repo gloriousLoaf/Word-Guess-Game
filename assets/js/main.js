@@ -7,9 +7,11 @@ var guessesMade = [];
 var selectWord = [];
 
 // wordBank of computer choices
-var wordBank = ["grapes", "orange", "peach", "mango", "apricot", "beans", "sprouts", "radish", "almonds", "pecans", "artichoke", "quinoa", "spinach", "kale", "grains", "corn", "peas"];
+var wordBank = ["grapes", "orange", "peach", "mango", "apricot", "beans", "oats", "radish", "almonds", "pecans", "artichoke", "quinoa", "spinach", "kale", "grains", "corn", "peas"];
+
 // No uppercase, numbers or symbols
-var validChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var choices = "abcdefghijklmnopqrstuvwxyz";
+var validChoices = choices.split("");
 
 // Random word generator
 var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -61,10 +63,6 @@ function badGuyWins() {
     document.getElementById("bad-guy-win").style.fontSize = "0.8em";
     document.getElementById("bad-guy-win").style.textAlign = "center";
 }
-
-// function badGuyQuiet() {
-//     document.getElementById("bad-guy-win").style.color = "white";
-// }
 
 /* New randomWord after win or loss, reset selectword[] ('The Word')
     first loop clears everything, so no letters from previous randomWord hangs around
@@ -166,6 +164,7 @@ document.onkeyup = function (event) {
     }
     else if (validate == true && wrongDupe == false && rightDupe == false) {
 
+        // Compares playerGuess against randomWord and sends it to isGameWon or isGameLost
         var checkPlayerGuess = function () {
             for (var i = 0; i < randomWord.length; i++) {
                 if (playerGuess == randomWord.charAt(i)) {
